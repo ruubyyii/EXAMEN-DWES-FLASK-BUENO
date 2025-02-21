@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div>
+        <h1>REGISTER</h1>
+        <form action="" method="post">
+            <div>
+                {{ form.fullname.label('Introduce tu nombre completo:') }}
+                {{ form.fullname }}
+            </div>
+            <div>
+                {{ form.email.label('Introduce tu email:') }}
+                {{ form.email }}
+            </div>
+            <div>
+                {{ form.password.label('Introduce tu contraseña:') }}
+                {{ form.password }}
+            </div>
+            <div>
+                {{ form.confirm.label('Repite la contraseña:') }}
+                {{ form.confirm }}
+            </div>
+            <div>
+                {{ form.submit }}
+            </div>
+        </form>
+        <p>Ya tienes cuenta? <a href="{{ url_for('login')}}">Inicia sesion</a></p>
+    </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div>
+        <form action="" method="post">
+            <div>
+                {{ form.fullname('Introduce tu email:') }}
+                {{ form.fullname }}
+            </div>
+            <div>
+                {{ form.number('Numero:') }}
+                {{ form.number }}
+            </div>
+            <div>
+                {{ form.email('Email:') }}
+                {{ form.email }}
+            </div>
+            <div>
+                {{ form.submit }}
+            </div>
+        </form>
+    </div>
+{% endblock %}
